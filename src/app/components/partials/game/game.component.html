@@ -1,0 +1,89 @@
+<div id="game" [ngClass]="{'playing' : gameOn}">
+  <header *ngIf="gameOn">
+    <div class="container">
+      <div class="row">
+        <p class="col-6">
+          <span>SCORE: {{score}}</span>
+          <span>|</span>
+          <span>LIFES: <i class="icon-heart" *ngFor="let h of ' '.repeat(lifes).split('')"></i></span>
+        </p>
+        <div class="col-6">
+          <i class="icon-cancel" (click)="endGame()"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="grid" *ngIf="grid">
+    <div class="grid-row"
+
+         *ngFor="let row of grid.cells; let i = index">
+      <div *ngFor="let col of row; let j = index"
+           class="grid-col"
+
+           [ngClass]="[
+              col.value === 1 ? 'alien' : '',
+              col.value === 2 ? 'starship' : '',
+              col.value === 3 ? 'alien' : '',
+              (col.value === 4 || col.value === 5)  ? 'laser' : '',
+              col.options !== undefined ? col.options.class : '']"
+      >
+      </div>
+    </div>
+  </div>
+
+  <div class="commands" *ngIf="gameOn && isTouchDevice">
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <div class="arrow" (click)="movePlayerToLeft()">
+            <
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="space" (click)="shootPlayer()">
+            shoot
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="arrow" (click)="movePlayerToRight()">
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" *ngIf="gameStatus && !gameStatus.isPlaying && gameOn && !gameStatus.isFirstGame">
+    <p class="title">
+      <span *ngIf="gameStatus.isWinner; else gameOver">YOU WIN!</span>
+      <ng-template #gameOver>GAME OVER!</ng-template>
+    </p>
+    <p>Insert Coin to play again</p>
+    <div>
+      <button (click)="endGame()">
+        Quit
+      </button>
+      <button (click)="newGame()">
+        INSERT COIN
+      </button>
+    </div>
+  </div>
+  <div class="popup" *ngIf="gameStatus && !gameStatus.isPlaying && gameOn && gameStatus.isFirstGame">
+    <p> Press < left > and < right > to move yourself and < space > to shoot.</p>
+    <p> Destroy all the letters before they destroy your green starships or kill you.</p>
+    <div>
+      <button (click)="endGame()">
+        Not now
+      </button>
+      <button (click)="newGame()">
+        PLAY
+      </button>
+    </div>
+  </div>
+
+
+  <div class="btn-container" *ngIf="!gameOn">
+    <button class="btn btn-blue" (click)="startGame()">PLAY</button>
+  </div>
+</div>
+

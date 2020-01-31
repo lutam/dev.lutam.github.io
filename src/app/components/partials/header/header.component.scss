@@ -1,0 +1,96 @@
+@import '../../../../assets/styles/variables';
+
+#app-header {
+  height: $header-height;
+  margin-top: $margin;
+  margin-bottom: 0;
+
+  .col-3{
+    @media only screen and (max-width: 400px) {
+      flex: 0 0 3rem;
+      max-width: 3rem;
+    }
+  }
+  .col-9 {
+    @media only screen and (max-width: 400px) {
+      flex: 0 0 calc(100% - 3rem);
+      max-width: calc(100% - 3rem);
+    }
+  }
+  .logo {
+
+    width: $header-height;
+    height: $header-height;
+    border: 3px solid $lutam-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $lutam-black;
+    font-size: 2rem;
+    transition: 200ms all ease-in-out;
+    font-weight: 700;
+    @media only screen and (max-width: 400px) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.5rem;
+    }
+
+
+      &:hover {
+      background: $lutam-black;
+      color: $lutam-light-blue;
+      text-decoration: none;
+
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: $lutam-black;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-left: 1rem;
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width: 400px) {
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+      }
+        &:focus{
+        outline:0;
+        span{
+          outline:1px dotted $lutam-black;
+        }
+      }
+      span {
+        position: relative;
+        padding: 2px 0.5rem;
+        &:after {
+          width: 100%;
+          max-width: 0;
+          height: 100%;
+          background: $lutam-black;
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "";
+          z-index: -1;
+          transition: 200ms all ease-in-out;
+        }
+      }
+      &:hover{
+        color: $lutam-light-blue;
+        text-decoration: none;
+        span {
+          &:after {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

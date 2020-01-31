@@ -1,0 +1,157 @@
+@import "node_modules/bootstrap";
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/global";
+
+#works {
+  margin-top: 6rem;
+  .work {
+    display: flex;
+    @include media-breakpoint-up(md) {
+      padding: 2rem 0;
+    }
+
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      margin-bottom: 4rem;
+
+    }
+
+    .image {
+      width: 8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 4rem;
+
+      @include media-breakpoint-down(md) {
+        width: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        width: 8rem;
+        height: 8rem;
+        @include media-breakpoint-down(md) {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+
+    .company {
+      margin-bottom: 0;
+    }
+
+    .duration {
+      display: flex;
+
+      > span {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+}
+
+
+#divertissements {
+  margin-top: 6rem;
+  /*.col-6 {
+    @media only screen and (max-width: 400px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }*/
+  @include media-breakpoint-down(md) {
+    margin-top: 2rem;
+  }
+  .s-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .divertissement {
+    background-size: cover;
+    padding-bottom: 66%;
+    margin-bottom: 1.5rem;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: $lutam-light-blue;
+      transition: 400ms all ease-in-out;
+      content: "";
+    }
+
+    &:hover{
+      &:before {
+        opacity: 1;
+      }
+      p.description {
+        top: 8%;
+      }
+      a.description{
+        bottom: 8%;
+      }
+    }
+
+    .description {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      transition: 200ms all ease-in-out;
+      span{
+        display: block;
+        &.title{
+          font-size: 1.5rem;
+          font-weight: 600;
+          @include media-breakpoint-down(md) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    p.description{
+      top: -10rem;
+    }
+
+    a.description{
+      bottom: -3rem;
+      border: 2px solid $lutam-blue;
+      background: $lutam-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $lutam-blue;
+      border-radius: 4px;
+      margin-left: 25%;
+      font-weight: 500;
+      width: 50%;
+      padding: 8px 1.5rem;
+      @include media-breakpoint-down(md) {
+        padding: 0 1rem;
+        font-size: 0.9rem;
+      }
+      &:hover{
+        text-decoration: none;
+        background: $lutam-blue;
+        color: $lutam-white;
+      }
+    }
+  }
+}

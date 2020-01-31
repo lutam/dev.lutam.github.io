@@ -1,0 +1,41 @@
+@import '../../../../assets/styles/variables';
+
+.game{
+  height: calc(100vh - #{$header-height} - #{$margin});
+  position: relative;
+}
+
+#skills {
+  .row {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    .skill-title {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+
+      p {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 170px;
+        font-size: 0.9rem;
+        &.outOfCircle{
+          bottom: -40px;
+          top: auto;
+        }
+      }
+
+      img {
+        position: absolute;
+      }
+    }
+  }
+}

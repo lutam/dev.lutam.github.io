@@ -1,0 +1,49 @@
+<section class="container" id="works">
+  <div class="row" *ngFor="let work of works">
+    <div class="col-12 col-lg-8 offset-lg-2 work">
+      <div class="image">
+        <img src="{{work.companyImage}}" alt="{{work.companyName}} logo" title="{{work.title}} @{{work.companyName}}"/>
+      </div>
+      <div>
+        <h3 class="bold">{{work.title}}</h3>
+        <p class="company">{{work.companyName}}</p>
+        <div class="duration">
+          <p>
+            <span>{{work.startDate| date:'MMM yyyy'}}</span>
+            -
+            <span *ngIf="!work.isCurrent; else present">{{work.endDate| date:'MMM yyyy'}}</span>
+            <ng-template #present>Present</ng-template>
+          </p>
+          <span>
+            &#183;
+          </span>
+          <p>
+            {{formatDuration(work.endDate, work.startDate) }}
+          </p>
+        </div>
+        <p class="description">
+          {{work.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="divertissements">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="s-title">
+        divertissement
+      </h4>
+    </div>
+    <div class="col-6 col-lg-4" *ngFor="let divertissement of divertissements">
+      <div class="divertissement" [ngStyle]="{'background-image': 'url(/assets/images/divertissements/'+divertissement.image+'.png)'}">
+        <p class="description">
+          <span class="title"> {{divertissement.title}}</span>
+          <span class="technology">{{divertissement.technology}}</span>
+        </p>
+        <a class="description" target="_blank" href="{{divertissement.link}}">VIEW</a>
+      </div>
+    </div>
+  </div>
+</section>

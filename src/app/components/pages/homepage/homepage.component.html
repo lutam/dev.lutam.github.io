@@ -1,0 +1,43 @@
+
+<section class="game container">
+  <app-game></app-game>
+</section>
+
+<section id="skills" class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="s-title">Skills</h2>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let skillCategory of skills">
+    <div class="col-12">
+      <h3 class="bold skill-title">
+        {{ skillCategory.title}}
+      </h3>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3" *ngFor="let skill of skillCategory.skills">
+
+      <div class="skill">
+        <p
+          [ngClass]="{'outOfCircle' : circleProgressRadius < 100}"
+          class="bold">{{skill.name}}</p>
+        <img
+          [ngStyle]="{top: 'calc(50% - ' + (circleProgressRadius - 20)/2 +'px)', left: 'calc(50% - ' + (circleProgressRadius-20)/2 +'px)', width: circleProgressRadius - 20 + 'px', height: circleProgressRadius - 20 + 'px'}"
+          src="/assets/images/skills/{{skill.image}}.svg" title="{{skill.name}}" alt="{{skill.name}}"/>
+        <circle-progress
+        [percent]="skill.percentage"
+        [radius]="circleProgressRadius"
+        [showUnits]="false"
+        [showSubtitle]="false"
+        [showTitle]="false"
+        [outerStrokeWidth]="circleProgressRadius/6.25"
+        [innerStrokeWidth]="3"
+        [outerStrokeColor]="skill.color"
+        [innerStrokeColor]="skill.color+'61'"
+        [animation]="false"
+        ></circle-progress>
+      </div>
+    </div>
+  </div>
+</section>
