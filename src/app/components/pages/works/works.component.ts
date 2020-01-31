@@ -105,8 +105,8 @@ export class WorksComponent implements OnInit {
         title: 'Weather',
         technology: 'jQuery',
         image: 'weather',
-        link: '/projects/weather/',
-      }
+        link: '/projects/weather',
+      },
       {
         title: 'Decimal Time',
         technology: 'jQuery',
