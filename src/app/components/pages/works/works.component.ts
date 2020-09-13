@@ -35,41 +35,78 @@ export class WorksComponent implements OnInit {
     const d = new Date();
     this.works = [
       {
+        companyImage: '/assets/images/works/crispy.png',
+        title: 'Senior Frontend Developer',
+        companyName: 'Crispy Bacon',
+        description: 'Crispy Bacon is a software development company specialized in web and mobile applications. Among the Crispy Bacon\'s clients there are several national wide companies in the banking, lottery and IOT sectors.\n' +
+          '<br><br>' +
+          'The client of the project I\'ve been working on was Sisal, the italian leader company in the betting and lottery sector.\n' +
+          'I was responsible of a 5-people international team dedicated to the frontend developing of the software used in all the italian Sisal\'s betting shops.\n' +
+          '<br><br>' +
+          'The software was entirely made using Typescript React and was designed to be the most re-usable, testable and well documented as possible.',
+        startDate: 1580599025000,
+        endDate: 1598915825000,
+        isCurrent: false,
+      },
+      {
         companyImage: '/assets/images/works/ped.svg',
-        title: 'Junior Frontend Developer',
+        title: 'Frontend Developer',
         companyName: 'PED.',
-        description: 'PED is a Tech Company based in Milan, Catania and Ragusa who designs and creates innovative web applications. I am a member of the frontend team in which I can improve day by day my knowledge of web technologies such as js frameworks and most used CMSs ',
+        description: 'PED is a tech-company based in Milan, Catania and Ragusa specialized in customized web applications and websites for startup companies.\n' +
+          '<br><br>' +
+          'Most of the projects I\'ve been working on were RESTful applications. I was accountable, together with the other members of the frontend team, for the developing of Vue.js platforms. The usual stack also included the latest web technologies such as Webpack or SASS.\n' +
+          '<br><br>' +
+          'I also worked in PED as a Full Stack developer using the most common CMSs such as Wordpress, PrestaShop and Joomla.',
         startDate: 1538402356000,
-        endDate: d.getTime(),
-        isCurrent: true,
+        endDate: 1577833200000,
+        isCurrent: false,
       },
       {
         companyImage: '/assets/images/works/lorenzo-vinci.svg',
         title: 'Full Stack Developer',
         companyName: 'Lorenzo Vinci',
-        description: 'Lorenzo Vinci is a company specialized in italian gourmet food. I was the developer of both the PrestaShop e-commerce and the Wordpress magazine, working side by side with designers and members of sales team.',
+        description: 'Lorenzo Vinci is a well-known website for the lovers of the italian gourmet and traditional food. The Lorenzo Vinci\'s online shop sells food products throughout Italy, while the blog is a point of reference for recipes and informations about italian food.\n' +
+          '<br><br>' +
+          'I was the only responsible for the backend and frontend developing and maintenance of both the sites: the PrestaShop e-commerce and the Wordpress blog.\n' +
+          'I also created an external backoffice platform for prices management in pure PHP and JQuery. ',
         startDate: 1475330356000,
         endDate: 1535810356000,
-      },
-      {
-        companyImage: '/assets/images/works/air-atlantis.svg',
-        title: 'Full Stack Developer',
-        companyName: 'Air Atlantis',
-        description: 'Air Atlantis is a multimedia company. In the 3 months I worked with them, I made some Wordpress websites and I improved their company website.',
-        startDate: 1462111156000,
-        endDate: 1469973556000,
       },
       {
         companyImage: '/assets/images/works/sis.svg',
         title: 'Full Stack Developer',
         companyName: 'Silenzio In Sala',
-        description: 'Silenzio In Sala is film review website. I entirely designed the project from scratch, from UI to server architecture. It was made in pure PHP (no framework), jQuery and Bootstrap and it included also a backoffice panel.',
+        description: 'Silenzio in Sala is today a followed italian website for cinema lovers and film reviews. During the time I\'ve been working for Silenzio In Sala I helped to create the site from scratch according to redational and SEO needs.\n' +
+          '<br><br>' +
+          'I was accountable for every technical and graphic aspect of the website, including the UI design, the developing and the server architecture.\n' +
+          '<br><br>' +
+          'Silenzio In Sala\'s backend was entirely made in pure PHP, while JQuery and CSS3 were used for the responsive and SEO-friendly frontend.',
         startDate: 1430488756000,
         endDate: 1488376756000,
-      }
+      },
+      {
+        companyImage: '/assets/images/works/air-atlantis.svg',
+        title: 'Full Stack Developer',
+        companyName: 'Air Atlantis',
+        description: 'Air Atlantis is a multimedia company based in Milan. <br><br>I helped developing some Wordpress websites and I also improved the company website adding a new backoffice section.',
+        startDate: 1462111156000,
+        endDate: 1469973556000,
+      },
     ];
 
     this.divertissements = [
+      {
+        title: 'Solar System',
+        technology: 'Vue.js',
+        image: 'solar-system',
+        link: '/projects/solar-system',
+      },
+      {
+        title: 'Arkanoid',
+        technology: 'Vue.js',
+        image: 'arkanoid',
+        link: '/projects/arkanoid',
+      },
       {
         title: 'Virtual Dogs',
         technology: 'React',

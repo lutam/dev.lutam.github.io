@@ -81,27 +81,33 @@ export class HomepageComponent implements OnInit {
         title: 'Frontend',
         skills: [
           {
+            color: '#61dbfb',
+            name: 'React',
+            percentage: 70,
+            image: 'react',
+          },
+          {
             color: '#e23237',
             name: 'Angular 2+',
-            percentage: 50,
+            percentage: 70,
             image: 'angular',
           },
           {
             color: '#41b883',
             name: 'Vue.js',
-            percentage: 70,
+            percentage: 85,
             image: 'vue',
           },
           {
             color: '#cd6799',
             name: 'SASS',
-            percentage: 80,
+            percentage: 90,
             image: 'sass',
           },
           {
             color: '#007acc',
             name: 'TypeScript',
-            percentage: 50,
+            percentage: 90,
             image: 'typescript',
           },
           {
@@ -130,19 +136,19 @@ export class HomepageComponent implements OnInit {
           {
             color: '#fb503b',
             name: 'Laravel',
-            percentage: 30,
+            percentage: 40,
             image: 'laravel',
           },
           {
             color: '#5aa845',
             name: 'Node.js',
-            percentage: 5,
+            percentage: 30,
             image: 'nodejs',
           },
           {
             color: '#f8981d',
             name: 'MySQL',
-            percentage: 55,
+            percentage: 40,
             image: 'mysql',
           },
         ]
@@ -182,14 +188,14 @@ export class HomepageComponent implements OnInit {
           {
             color: '#8ed6fb',
             name: 'Webpack',
-            percentage: 50,
+            percentage: 70,
             image: 'webpack',
           },
           {
-            color: '#d34a47',
-            name: 'Gulp',
-            percentage: 10,
-            image: 'gulp',
+            color: '#c63d14',
+            name: 'Jest',
+            percentage: 50,
+            image: 'jest',
           },
           {
             color: '#1d91b4',

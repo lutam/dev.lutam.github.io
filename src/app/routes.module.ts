@@ -7,7 +7,7 @@ import {BioComponent} from './components/pages/bio/bio.component';
 
 const routes: Routes = [
   { path: '',      component: HomepageComponent },
-  { path: 'works',      component: WorksComponent },
+  { path: 'experience',      component: WorksComponent },
   { path: 'bio',      component: BioComponent },
 ];
 

@@ -21,9 +21,7 @@
             {{formatDuration(work.endDate, work.startDate) }}
           </p>
         </div>
-        <p class="description">
-          {{work.description}}
-        </p>
+        <p [innerHTML]="work.description" class="description"></p>
       </div>
     </div>
   </div>
