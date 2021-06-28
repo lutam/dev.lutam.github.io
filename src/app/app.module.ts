@@ -9,7 +9,6 @@ import { HeaderComponent } from './components/partials/header/header.component';
 import { WorksComponent } from './components/pages/works/works.component';
 
 import { NgCircleProgressModule } from 'ng-circle-progress';
-import {BioComponent} from './components/pages/bio/bio.component';
 
 
 @NgModule({
@@ -19,7 +18,6 @@ import {BioComponent} from './components/pages/bio/bio.component';
     GameComponent,
     HeaderComponent,
     WorksComponent,
-    BioComponent,
   ],
   imports: [
     BrowserModule,

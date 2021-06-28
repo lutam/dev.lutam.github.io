@@ -3,12 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {HomepageComponent} from './components/pages/homepage/homepage.component';
 import {WorksComponent} from './components/pages/works/works.component';
-import {BioComponent} from './components/pages/bio/bio.component';
 
 const routes: Routes = [
   { path: '',      component: HomepageComponent },
   { path: 'experience',      component: WorksComponent },
-  { path: 'bio',      component: BioComponent },
+  { path: '**', redirectTo: '/experience'},
 ];
 
 

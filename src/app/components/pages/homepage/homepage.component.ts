@@ -60,13 +60,13 @@ export class HomepageComponent implements OnInit {
           {
             color: '#f7df1e',
             name: 'JS ES6',
-            percentage: 80,
+            percentage: 92,
             image: 'js',
           },
           {
             color: '#6181b6',
             name: 'PHP',
-            percentage: 80,
+            percentage: 65,
             image: 'php',
           },
           {
@@ -83,19 +83,19 @@ export class HomepageComponent implements OnInit {
           {
             color: '#61dbfb',
             name: 'React',
-            percentage: 70,
+            percentage: 93,
             image: 'react',
           },
           {
             color: '#e23237',
             name: 'Angular 2+',
-            percentage: 70,
+            percentage: 65,
             image: 'angular',
           },
           {
             color: '#41b883',
             name: 'Vue.js',
-            percentage: 85,
+            percentage: 90,
             image: 'vue',
           },
           {
@@ -119,7 +119,7 @@ export class HomepageComponent implements OnInit {
           {
             color: '#563d7c',
             name: 'Bootstrap',
-            percentage: 90,
+            percentage: 95,
             image: 'bootstrap',
           },
         ]
@@ -194,7 +194,7 @@ export class HomepageComponent implements OnInit {
           {
             color: '#c63d14',
             name: 'Jest',
-            percentage: 50,
+            percentage: 70,
             image: 'jest',
           },
           {

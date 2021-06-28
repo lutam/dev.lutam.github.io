@@ -35,6 +35,16 @@ export class WorksComponent implements OnInit {
     const d = new Date();
     this.works = [
       {
+        companyImage: '/assets/images/works/hotter.png',
+        title: 'Frontend Developer',
+        companyName: 'Hotter Shoes',
+        description: 'Hotter Shoes is an english footwear brand selling in the UK, the US and several european countries.' +
+          '<br><br>' +
+          'I am part of the team responsible for developing, improving and maintaining the company e-commerce: a single page React application.',
+        startDate: 1601581419000,
+        endDate: 1624913046000,
+        isCurrent: true,
+      },{
         companyImage: '/assets/images/works/crispy.png',
         title: 'Senior Frontend Developer',
         companyName: 'Crispy Bacon',
