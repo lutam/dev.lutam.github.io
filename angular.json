@@ -125,5 +125,8 @@
         }
       }
     }},
-  "defaultProject": "lutam2"
+  "defaultProject": "lutamdev",
+  "cli": {
+    "analytics": false
+  }
 }
