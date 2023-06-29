@@ -35,6 +35,17 @@ export class WorksComponent implements OnInit {
     const d = new Date();
     this.works = [
       {
+        companyImage: '/assets/images/works/kc.png',
+        title: 'Senior Frontend Developer',
+        companyName: 'Kin+Carta',
+        description: 'I initially worked on several projects as a mid-level frontend developer, mostly with React.' +
+         '<br><br>' +
+          ' As of May 2021, I became responsible for the frontend of an application for a major client built with Node.js (specifically with Express).',
+        startDate: 1647038575000,
+        endDate: 1624913046000,
+        isCurrent: true,
+      },
+      {
         companyImage: '/assets/images/works/hotter.png',
         title: 'Frontend Developer',
         companyName: 'Hotter Shoes',
@@ -42,8 +53,8 @@ export class WorksComponent implements OnInit {
           '<br><br>' +
           'I am part of the team responsible for developing, improving and maintaining the company e-commerce: a single page React application.',
         startDate: 1601581419000,
-        endDate: 1624913046000,
-        isCurrent: true,
+        endDate: 1636670575000,
+        isCurrent: false,
       },{
         companyImage: '/assets/images/works/crispy.png',
         title: 'Senior Frontend Developer',
@@ -164,7 +175,8 @@ export class WorksComponent implements OnInit {
   }
 
   public formatDuration(start, end): string {
-    const exactYears = (start - end) / (1000 * 3600 * 24 * 365);
+    const realEnd = end ?? ((new Date()).getTime());
+    const exactYears = (realEnd - start) / (1000 * 3600 * 24 * 365);
     const years = Math.floor(exactYears)
     const exactMonths = (exactYears - years) * 12;
     const months = Math.round(exactMonths);

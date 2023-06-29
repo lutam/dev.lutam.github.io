@@ -75,6 +75,12 @@ export class HomepageComponent implements OnInit {
             percentage: 24,
             image: 'cpp',
           },
+          {
+            color: '#007acc',
+            name: 'TypeScript',
+            percentage: 90,
+            image: 'typescript',
+          },
         ]
       },
       {
@@ -87,28 +93,34 @@ export class HomepageComponent implements OnInit {
             image: 'react',
           },
           {
-            color: '#e23237',
-            name: 'Angular 2+',
-            percentage: 65,
-            image: 'angular',
-          },
-          {
             color: '#41b883',
             name: 'Vue.js',
             percentage: 90,
             image: 'vue',
           },
           {
+            color: '#e23237',
+            name: 'Angular 2+',
+            percentage: 50,
+            image: 'angular',
+          },
+          {
+            color: '#61dbfb',
+            name: 'React Native',
+            percentage: 60,
+            image: 'react',
+          },
+          {
             color: '#cd6799',
             name: 'SASS',
-            percentage: 90,
+            percentage: 95,
             image: 'sass',
           },
           {
-            color: '#007acc',
-            name: 'TypeScript',
+            color: '#000',
+            name: 'Next.js',
             percentage: 90,
-            image: 'typescript',
+            image: 'next-js',
           },
           {
             color: '#0767aa',
@@ -119,14 +131,32 @@ export class HomepageComponent implements OnInit {
           {
             color: '#563d7c',
             name: 'Bootstrap',
-            percentage: 95,
+            percentage: 100,
             image: 'bootstrap',
+          },
+          {
+            color: '#e535ab',
+            name: 'Nunjucks',
+            percentage: 95,
+            image: 'nunjucks',
           },
         ]
       },
       {
         title: 'Backend & DB',
         skills: [
+          {
+            color: '#5aa845',
+            name: 'Node.js',
+            percentage: 80,
+            image: 'nodejs',
+          },
+          {
+            color: '#262626',
+            name: 'Express',
+            percentage: 80,
+            image: 'express',
+          },
           {
             color: '#1a171b',
             name: 'Symfony+',
@@ -140,16 +170,16 @@ export class HomepageComponent implements OnInit {
             image: 'laravel',
           },
           {
-            color: '#5aa845',
-            name: 'Node.js',
-            percentage: 30,
-            image: 'nodejs',
+            color: '#f8981d',
+            name: 'MySQL',
+            percentage: 50,
+            image: 'mysql',
           },
           {
             color: '#f8981d',
-            name: 'MySQL',
-            percentage: 40,
-            image: 'mysql',
+            name: 'GraphQL',
+            percentage: 50,
+            image: 'graphql',
           },
         ]
       },
@@ -194,7 +224,7 @@ export class HomepageComponent implements OnInit {
           {
             color: '#c63d14',
             name: 'Jest',
-            percentage: 70,
+            percentage: 85,
             image: 'jest',
           },
           {

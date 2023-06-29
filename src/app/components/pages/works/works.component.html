@@ -39,7 +39,7 @@
             &#183;
           </span>
           <p>
-            {{formatDuration(work.endDate, work.startDate) }}
+            {{formatDuration(work.startDate, work.isCurrent ? null : work.endDate) }}
           </p>
         </div>
         <p [innerHTML]="work.description" class="description"></p>
