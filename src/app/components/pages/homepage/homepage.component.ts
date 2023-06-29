@@ -135,7 +135,7 @@ export class HomepageComponent implements OnInit {
             image: 'bootstrap',
           },
           {
-            color: '#e535ab',
+            color: '#1c4913',
             name: 'Nunjucks',
             percentage: 95,
             image: 'nunjucks',
@@ -176,7 +176,7 @@ export class HomepageComponent implements OnInit {
             image: 'mysql',
           },
           {
-            color: '#f8981d',
+            color: '#e535ab',
             name: 'GraphQL',
             percentage: 50,
             image: 'graphql',
